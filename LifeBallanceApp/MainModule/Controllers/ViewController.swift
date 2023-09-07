@@ -24,7 +24,8 @@ class ViewController: UIViewController {
     private let userNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Your name"
-        label.textColor = #colorLiteral(red: 0.3176470588, green: 0.3176470588, blue: 0.3137254902, alpha: 1)
+        label.textColor = .specialGray
+        label.font = .robotoMedium24()
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -33,14 +34,17 @@ class ViewController: UIViewController {
     
     private lazy var addWorkoutButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = #colorLiteral(red: 0.9921568627, green: 0.8392156863, blue: 0.3568627451, alpha: 1)
+        button.backgroundColor = .specialYellow
         button.layer.cornerRadius = 10
         button.setTitle("Add workout", for: .normal)
         button.setImage(UIImage(named: "plus"), for: .normal)
-        button.tintColor = #colorLiteral(red: 0.1411764706, green: 0.2941176471, blue: 0.262745098, alpha: 1)
+        button.tintColor = .specialDarkGreen
+        button.titleLabel?.font = .robotoMedium12()
         button.imageEdgeInsets = .init(top: 0, left: 20, bottom: 15, right: 0)
         button.titleEdgeInsets = .init(top: 50, left: -40, bottom: 0, right: 0)
         button.addTarget(self, action: #selector(addWorkoutButtonTapped), for: .touchUpInside)
+        button.addShadowView()
+        
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -62,7 +66,7 @@ class ViewController: UIViewController {
         
     }
     private func setupViews(){     // Добавление на вью
-        view.backgroundColor = #colorLiteral(red: 0.9532985091, green: 0.9427116513, blue: 0.9085384011, alpha: 1)
+        view.backgroundColor = .specialBackground
         
         view.addSubview(calendarView)
         view.addSubview(userPhotoImageView)
@@ -70,10 +74,6 @@ class ViewController: UIViewController {
         view.addSubview(addWorkoutButton)
         view.addSubview(weatherView)
         
-        addWorkoutButton.layer.shadowColor = UIColor.black.cgColor
-        addWorkoutButton.layer.shadowOffset = CGSize(width: 0, height: 5)
-        addWorkoutButton.layer.shadowOpacity = 0.5
-        addWorkoutButton.layer.shadowRadius = 5
     }
     
 }

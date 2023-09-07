@@ -12,8 +12,9 @@ class WeatherView: UIView { //пользовательские элементы
     private let upperLabel: UILabel = {
         let label = UILabel()
         label.text = "Солнечно"
-        label.textColor = #colorLiteral(red: 0.3176470588, green: 0.3176470588, blue: 0.3137254902, alpha: 1)
-        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.textColor = .gray
+        label.font = .robotoMedium18()
+        label.textColor = .specialGray
         label.adjustsFontSizeToFitWidth = true
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -22,10 +23,12 @@ class WeatherView: UIView { //пользовательские элементы
     private let bottomLabel: UILabel = {
         let label = UILabel()
         label.text = "Хорошая погода, чтобы позаниматься на улице"
-        label.textColor = #colorLiteral(red: 0.7607843137, green: 0.7607843137, blue: 0.7607843137, alpha: 1)
+        label.textColor = .specialGray
         label.numberOfLines = 2
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
+        label.font = .robotoMedium14()
+        label.font = .systemFont(ofSize: 14)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -54,12 +57,9 @@ class WeatherView: UIView { //пользовательские элементы
     }
 
     private func setupView() {
+        addShadowView()
         backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         layer.cornerRadius = 10
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 5)
-        layer.shadowRadius = 5
-        layer.shadowOpacity = 0.5
         translatesAutoresizingMaskIntoConstraints = false
     }
 }
@@ -72,17 +72,19 @@ extension WeatherView{
             
             upperLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             upperLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            //upperLabel.leadingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
             
             bottomLabel.topAnchor.constraint(equalTo: upperLabel.bottomAnchor, constant: 5),
             bottomLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             bottomLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
             bottomLabel.trailingAnchor.constraint(equalTo: weatherImage.leadingAnchor, constant: 10),
             
+            weatherImage.centerYAnchor.constraint(equalTo: centerYAnchor),
             weatherImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            weatherImage.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-
+            weatherImage.widthAnchor.constraint(equalToConstant: 70),
+            weatherImage.heightAnchor.constraint(equalToConstant: 70),
             
-            
+        
         ])
     }
 }
