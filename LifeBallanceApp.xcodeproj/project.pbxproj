@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6B4CDC162AA1158400E59BC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDC152AA1158400E59BC1 /* AppDelegate.swift */; };
 		6B4CDC182AA1158400E59BC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDC172AA1158400E59BC1 /* SceneDelegate.swift */; };
-		6B4CDC1A2AA1158400E59BC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDC192AA1158400E59BC1 /* ViewController.swift */; };
+		6B4CDC1A2AA1158400E59BC1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDC192AA1158400E59BC1 /* MainViewController.swift */; };
 		6B4CDC1F2AA1158700E59BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B4CDC1E2AA1158700E59BC1 /* Assets.xcassets */; };
 		6B4CDC222AA1158700E59BC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4CDC202AA1158700E59BC1 /* LaunchScreen.storyboard */; };
 		6B4CDC302AA37A9700E59BC1 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDC2F2AA37A9700E59BC1 /* CalendarView.swift */; };
@@ -21,13 +21,20 @@
 		6B4CDC402AA9B15100E59BC1 /* UIFont + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDC3F2AA9B15100E59BC1 /* UIFont + Extensions.swift */; };
 		6B4CDC422AA9BAC000E59BC1 /* CalendarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDC412AA9BAC000E59BC1 /* CalendarCollectionView.swift */; };
 		6B4CDC452AA9BF0B00E59BC1 /* CalendarCollectionViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDC442AA9BF0B00E59BC1 /* CalendarCollectionViewCells.swift */; };
+		6B4CDC472AAC416900E59BC1 /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDC462AAC416900E59BC1 /* UILabel + Extension.swift */; };
+		6B4CDC492AAC4D1400E59BC1 /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDC482AAC4D1400E59BC1 /* MainTableView.swift */; };
+		6B4CDC4B2AAC52D100E59BC1 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDC4A2AAC52D100E59BC1 /* WorkoutTableViewCell.swift */; };
+		6B4CDC4D2AAE278800E59BC1 /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDC4C2AAE278800E59BC1 /* UIStackView + Extension.swift */; };
+		6B4CDC522AAEE79C00E59BC1 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDC512AAEE79C00E59BC1 /* StatisticViewController.swift */; };
+		6B4CDC552AAEEFEE00E59BC1 /* StatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDC542AAEEFEE00E59BC1 /* StatisticsTableViewCell.swift */; };
+		6B4CDC572AAEF01D00E59BC1 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDC562AAEF01D00E59BC1 /* StatisticsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6B4CDC122AA1158400E59BC1 /* LifeBallanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeBallanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B4CDC152AA1158400E59BC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B4CDC172AA1158400E59BC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6B4CDC192AA1158400E59BC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6B4CDC192AA1158400E59BC1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6B4CDC1E2AA1158700E59BC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B4CDC212AA1158700E59BC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B4CDC232AA1158700E59BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +47,13 @@
 		6B4CDC3F2AA9B15100E59BC1 /* UIFont + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extensions.swift"; sourceTree = "<group>"; };
 		6B4CDC412AA9BAC000E59BC1 /* CalendarCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionView.swift; sourceTree = "<group>"; };
 		6B4CDC442AA9BF0B00E59BC1 /* CalendarCollectionViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCells.swift; sourceTree = "<group>"; };
+		6B4CDC462AAC416900E59BC1 /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
+		6B4CDC482AAC4D1400E59BC1 /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
+		6B4CDC4A2AAC52D100E59BC1 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		6B4CDC4C2AAE278800E59BC1 /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
+		6B4CDC512AAEE79C00E59BC1 /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
+		6B4CDC542AAEEFEE00E59BC1 /* StatisticsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableViewCell.swift; sourceTree = "<group>"; };
+		6B4CDC562AAEF01D00E59BC1 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +86,7 @@
 		6B4CDC142AA1158400E59BC1 /* LifeBallanceApp */ = {
 			isa = PBXGroup;
 			children = (
+				6B4CDC4E2AAEE72000E59BC1 /* StatisticModule */,
 				6B4CDC292AA116AE00E59BC1 /* Application */,
 				6B4CDC2C2AA3533500E59BC1 /* MainModule */,
 				6B4CDC332AA9A12C00E59BC1 /* Extensions */,
@@ -124,6 +139,7 @@
 				6B4CDC2F2AA37A9700E59BC1 /* CalendarView.swift */,
 				6B4CDC412AA9BAC000E59BC1 /* CalendarCollectionView.swift */,
 				6B4CDC312AA476F800E59BC1 /* WeatherView.swift */,
+				6B4CDC482AAC4D1400E59BC1 /* MainTableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -131,7 +147,7 @@
 		6B4CDC2E2AA3537600E59BC1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6B4CDC192AA1158400E59BC1 /* ViewController.swift */,
+				6B4CDC192AA1158400E59BC1 /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -150,6 +166,8 @@
 				6B4CDC362AA9A16D00E59BC1 /* UIView + Extensions.swift */,
 				6B4CDC3D2AA9A6EE00E59BC1 /* UIColor + Extensions.swift */,
 				6B4CDC3F2AA9B15100E59BC1 /* UIFont + Extensions.swift */,
+				6B4CDC462AAC416900E59BC1 /* UILabel + Extension.swift */,
+				6B4CDC4C2AAE278800E59BC1 /* UIStackView + Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -167,8 +185,51 @@
 			isa = PBXGroup;
 			children = (
 				6B4CDC442AA9BF0B00E59BC1 /* CalendarCollectionViewCells.swift */,
+				6B4CDC4A2AAC52D100E59BC1 /* WorkoutTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		6B4CDC4E2AAEE72000E59BC1 /* StatisticModule */ = {
+			isa = PBXGroup;
+			children = (
+				6B4CDC582AAF35EA00E59BC1 /* Models */,
+				6B4CDC4F2AAEE73500E59BC1 /* Views */,
+				6B4CDC502AAEE74800E59BC1 /* Controllers */,
+			);
+			path = StatisticModule;
+			sourceTree = "<group>";
+		};
+		6B4CDC4F2AAEE73500E59BC1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6B4CDC532AAEEFC800E59BC1 /* Cells */,
+				6B4CDC562AAEF01D00E59BC1 /* StatisticsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6B4CDC502AAEE74800E59BC1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6B4CDC512AAEE79C00E59BC1 /* StatisticViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6B4CDC532AAEEFC800E59BC1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6B4CDC542AAEEFEE00E59BC1 /* StatisticsTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6B4CDC582AAF35EA00E59BC1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,12 +305,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B4CDC322AA476F800E59BC1 /* WeatherView.swift in Sources */,
+				6B4CDC4D2AAE278800E59BC1 /* UIStackView + Extension.swift in Sources */,
 				6B4CDC452AA9BF0B00E59BC1 /* CalendarCollectionViewCells.swift in Sources */,
-				6B4CDC1A2AA1158400E59BC1 /* ViewController.swift in Sources */,
+				6B4CDC522AAEE79C00E59BC1 /* StatisticViewController.swift in Sources */,
+				6B4CDC1A2AA1158400E59BC1 /* MainViewController.swift in Sources */,
 				6B4CDC422AA9BAC000E59BC1 /* CalendarCollectionView.swift in Sources */,
+				6B4CDC552AAEEFEE00E59BC1 /* StatisticsTableViewCell.swift in Sources */,
 				6B4CDC162AA1158400E59BC1 /* AppDelegate.swift in Sources */,
 				6B4CDC3E2AA9A6EE00E59BC1 /* UIColor + Extensions.swift in Sources */,
+				6B4CDC492AAC4D1400E59BC1 /* MainTableView.swift in Sources */,
+				6B4CDC472AAC416900E59BC1 /* UILabel + Extension.swift in Sources */,
+				6B4CDC4B2AAC52D100E59BC1 /* WorkoutTableViewCell.swift in Sources */,
 				6B4CDC402AA9B15100E59BC1 /* UIFont + Extensions.swift in Sources */,
+				6B4CDC572AAEF01D00E59BC1 /* StatisticsView.swift in Sources */,
 				6B4CDC302AA37A9700E59BC1 /* CalendarView.swift in Sources */,
 				6B4CDC372AA9A16D00E59BC1 /* UIView + Extensions.swift in Sources */,
 				6B4CDC182AA1158400E59BC1 /* SceneDelegate.swift in Sources */,

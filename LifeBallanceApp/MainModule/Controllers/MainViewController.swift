@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     //пользовательские элементы
     
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         button.imageEdgeInsets = .init(top: 0, left: 20, bottom: 15, right: 0)
         button.titleEdgeInsets = .init(top: 50, left: -40, bottom: 0, right: 0)
         button.addTarget(self, action: #selector(addWorkoutButtonTapped), for: .touchUpInside)
-        button.addShadowView()
+        button.addShadowOnView()
         
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -54,6 +54,8 @@ class ViewController: UIViewController {
     }
     private let calendarView = CalendarView()
     private let weatherView = WeatherView()
+    private let workoutTodayLabel = UILabel(text: "Workout toDay")
+    private let tableView = MainTableView()
     
     override func viewDidLayoutSubviews() {
         userPhotoImageView.layer.cornerRadius = userPhotoImageView.frame.width / 2
@@ -73,12 +75,14 @@ class ViewController: UIViewController {
         view.addSubview(userNameLabel)
         view.addSubview(addWorkoutButton)
         view.addSubview(weatherView)
+        view.addSubview(workoutTodayLabel)
+        view.addSubview(tableView)
         
     }
     
 }
 //MARK: Constraints
-extension ViewController {
+extension MainViewController {
     private func setConstaints(){
         NSLayoutConstraint.activate([
             userPhotoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
@@ -103,7 +107,16 @@ extension ViewController {
             weatherView.topAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: 10),
             weatherView.leadingAnchor.constraint(equalTo: addWorkoutButton.trailingAnchor, constant: 10),
             weatherView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            weatherView.heightAnchor.constraint(equalToConstant: 80)
+            weatherView.heightAnchor.constraint(equalToConstant: 80),
+            
+            workoutTodayLabel.topAnchor.constraint(equalTo: addWorkoutButton.bottomAnchor, constant: 10),
+            workoutTodayLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            workoutTodayLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            
+            tableView.topAnchor.constraint(equalTo: workoutTodayLabel.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
         ])
     }
